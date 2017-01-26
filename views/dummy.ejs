@@ -1,0 +1,16 @@
+<form enctype='multipart/form-data' action='/auth/profile' method='POST'>
+  Title: <input type="text" name="title">
+  Description: <input type="text" name="description">
+  Date: <input type="text" name="date">
+  <input type='file' name='myFile'>
+  <input type='submit' class='btn'>
+</form>
+
+<div>
+  <a href="/auth/profile/events"><button type="button" class="btn btn-default">Your Events</button></a>
+</div>
+
+<% image %>
+<% image.forEach(function (item, index) {%>
+  <a href ="/auth/profile/img/<%= item.id%>"><img src="<%= item.imageproperties %>"></img></a>
+<% }) %>

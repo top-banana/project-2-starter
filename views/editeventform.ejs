@@ -1,0 +1,11 @@
+<h1>Edit Event Form</h1>
+    <% event %>
+
+<form method="POST" action="/auth/profile/events/<%=event.id%>/edit?_method=PUT">
+  Description: <input type="text" name="description" value="<%= event.description %>">
+  Date: <input type="text" name="date" value="<%= event.date%>">
+  Location: <input type="text" name="location" value="<%= event.location %>">
+  Group size: <input type="text" name="groupsize" value="<%= event.groupsize %>">
+  Status: <input type="text" name="status" value="<%= event.status %>">
+  <input type="submit" value="Submit">
+</form>

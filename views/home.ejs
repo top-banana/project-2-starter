@@ -1,0 +1,12 @@
+
+<a href="/auth/signup"><button type="button" class="btn btn-primary">Signup</button></a>
+<a href="/auth/login"><button type="button" class="btn btn-primary">Login</button></a>
+<a href="/auth/logout"><button type="button" class="btn btn-primary">Sign Out</button></a>
+<a href="/public/events"><button type="button" class="btn btn-primary">Events</button></a>
+
+
+
+<% image %>
+<% image.forEach(function (item, index) {%>
+  <img src="<%= item.imageproperties%>"></img>
+<%}) %>

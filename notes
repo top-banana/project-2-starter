@@ -1,0 +1,53 @@
+<img src='<%= user.arrofimages[0].url %>'></img>
+
+
+<% user.arrofimages %>
+<% user.arrofimages.forEach(function (item, index) {%>
+  <img src="<%= item%>"></img>
+<%}); %>
+
+
+<% image.forEach(function (item, index) {%>
+  <%= item.name%>
+<%}); %>
+
+
+<% if (currentUser.arrofimages.length !== 0) { %>
+  <% image %>
+  <% image.forEach(function (item, index) {%>
+    <a href ="/auth/profile/img/<%= item.id%>"><img src="<%= item.imageproperties %>"></img></a>
+  <% }) %>
+<% } %>
+
+
+<% if (req.user.id !== null) {%>
+  <% image %>
+  <% image.forEach(function (item, index) {%>
+    <a href ="/auth/profile/img/<%= item.id%>"><img src="<%= item.imageproperties %>"></img></a>
+  <% }) %>
+<%} %>
+
+// User.findOne({_id : req.user.id}, function (err,user) {
+//   // var params = req.params.id.toString()
+//   for (let i = 0; i < user.images.length; i++) {
+//     if (user.images[i].equals(req.params.id)) {
+//       console.log("inside if statement");
+//       console.log("params"+req.params.id);
+//       // indextoslice = i
+//       // console.log("index to slice"+indextoslice);
+//       console.log(user.images[i]);
+//       // console.log("index to slice"+indextoslice);
+//       console.log('dax before slice',user.images);
+//       user.images.splice(i, 1)
+//       console.log('dax after slice',user.images);
+//       console.log('after save slice',user.images);
+//       // .concat(user.images.slice(indextoslice+1))
+//       console.log("slicing ");
+//       console.log(user.images);
+//     }
+//   }
+//   user.save((function(err, user2){
+//     console.log(user2);
+//     res.redirect('/auth/profile');
+//   }))
+// })

@@ -1,0 +1,34 @@
+<div class='container'>
+    <h1>Edit Event</h1>
+    <table class='table'>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Ideal group size</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% event %>
+      <tr>
+      <td><%= event.id %></td>
+      <td><%= event.description %></td>
+      <td><%= event.date %></td>
+      <td><%= event.location %></td>
+      <td><%= event.groupsize %></td>
+      <td><%= event.status %></td>
+      <tr>
+    </tbody>
+    </table>
+
+
+<a href ="/auth/profile/events/<%= event.id%>/edit"<button type="button" class="btn btn-default">Edit event</button></a>
+<form method="POST" action="/auth/profile/events/<%= event.id%>?_method=DELETE">
+<input type="submit" value="Delete">
+</form>
+
+</div>

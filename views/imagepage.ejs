@@ -1,0 +1,28 @@
+<div class="image">
+
+<% image %>
+<img src="<%= image.imageproperties %>"></img><br>
+</div>
+
+<div>
+<a href ="/auth/profile/img/<%= image._id%>/edit"><button type="button" class="btn btn-default">Edit</button></a>
+</div>
+
+
+<div>
+  <form method="POST" action="/auth/profile/img/<%= image.id%>?_method=DELETE">
+    <input type="submit" value="Delete">
+  </form>
+</div>
+
+<div class= "imagedescription">
+<h3>Title</h3>
+<%= image.title%>
+<h3>Description</h3>
+<%= image.description%>
+</div>
+
+
+<div>
+<a href ="/auth/profile"><button type="button" class="btn btn-default">Back to profile</button></a>
+</div>
